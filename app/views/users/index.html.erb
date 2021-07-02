@@ -1,0 +1,7 @@
+<h1>All Users</h1>
+<% @users.each do |user| %>
+  <ul>
+    <li><%= link_to user.username, user_path(user) %><br/>
+    <%= pluralize(user.articles.count, 'articles') %></li>
+  </ul>
+<% end %>
